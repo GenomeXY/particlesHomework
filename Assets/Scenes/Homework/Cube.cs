@@ -5,7 +5,8 @@ using UnityEngine.Events;
 
 public class Cube : MonoBehaviour
 {
-    public UnityEvent EventOnCollision;
+    public UnityEvent EventOnCollisionWall;
+    public UnityEvent EventOnCollisionGround;
     private void OnCollisionEnter(Collision collision)
     {
         Wall wall = collision.collider.GetComponent<Wall>();
@@ -13,11 +14,12 @@ public class Cube : MonoBehaviour
 
         if (wall)
         {
-            EventOnCollision.Invoke();
+            EventOnCollisionWall.Invoke();
         }
         else if (ground)
         {
-            EventOnCollision.Invoke();
+            //EventOnCollisionWall.Invoke();
+            EventOnCollisionGround.Invoke();
             Destroy(gameObject);
         }
     }
