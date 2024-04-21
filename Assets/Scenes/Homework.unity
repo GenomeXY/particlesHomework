@@ -125,6 +125,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &566118993 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 855005645420549887, guid: 1ed390059ed475b4ebf1d56e116d9a35,
+    type: 3}
+  m_PrefabInstance: {fileID: 765256067305167094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &882123209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 882123211}
+  - component: {fileID: 882123210}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &882123210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882123209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0753bd52365f94ab16b2f45526ff8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ParticlesPrefab: {fileID: 862470827631628868, guid: 4cfde46ba48b043438b7b2ef93585050,
+    type: 3}
+  Spawn: {fileID: 882123211}
+--- !u!4 &882123211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882123209}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 566118993}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &922674944
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +190,7 @@ GameObject:
   - component: {fileID: 922674948}
   - component: {fileID: 922674947}
   - component: {fileID: 922674946}
+  - component: {fileID: 922674950}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -230,6 +284,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
+--- !u!114 &922674950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922674944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62e645a4e7b6ad4684bc4b5937c055a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1720112826
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +308,7 @@ GameObject:
   - component: {fileID: 1720112830}
   - component: {fileID: 1720112829}
   - component: {fileID: 1720112828}
+  - component: {fileID: 1720112832}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -335,6 +402,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1720112832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720112826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50153e67ac20b81448e48eaffda3e6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1947596459
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,12 +727,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8259493308380369244, guid: 1ed390059ed475b4ebf1d56e116d9a35,
+    - target: {fileID: 5947657058608364090, guid: 1ed390059ed475b4ebf1d56e116d9a35,
         type: 3}
-      propertyPath: m_Material
+      propertyPath: EventOnCollision.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947657058608364090, guid: 1ed390059ed475b4ebf1d56e116d9a35,
+        type: 3}
+      propertyPath: EventOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947657058608364090, guid: 1ed390059ed475b4ebf1d56e116d9a35,
+        type: 3}
+      propertyPath: EventOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 13400000, guid: dbf0aa27702d5bc4cbf8c2d387a1a61d,
-        type: 2}
+      objectReference: {fileID: 882123210}
+    - target: {fileID: 5947657058608364090, guid: 1ed390059ed475b4ebf1d56e116d9a35,
+        type: 3}
+      propertyPath: EventOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947657058608364090, guid: 1ed390059ed475b4ebf1d56e116d9a35,
+        type: 3}
+      propertyPath: EventOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Create
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947657058608364090, guid: 1ed390059ed475b4ebf1d56e116d9a35,
+        type: 3}
+      propertyPath: EventOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ParticlePrefabCreator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947657058608364090, guid: 1ed390059ed475b4ebf1d56e116d9a35,
+        type: 3}
+      propertyPath: EventOnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8825087382016420315, guid: 1ed390059ed475b4ebf1d56e116d9a35,
         type: 3}
       propertyPath: m_Name
@@ -661,7 +769,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 855005645420549887, guid: 1ed390059ed475b4ebf1d56e116d9a35,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 882123211}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ed390059ed475b4ebf1d56e116d9a35, type: 3}
 --- !u!1660057539 &9223372036854775807
